@@ -1,0 +1,44 @@
+plugins {
+    id 'org.springframework.boot' version '2.0.3.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+ext {
+    set('springCloudVersion', "Finchley.RELEASE")
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    group = 'com.successfactors.platform.demo'
+    version = '0.0.1-SNAPSHOT'
+    sourceCompatibility = '1.8'
+
+    repositories {
+        mavenCentral()
+    }
+
+    bootJar {
+        enabled = false
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:Finchley.RELEASE"
+        }
+    }
+
+    dependencies {
+        testCompile('org.springframework.boot:spring-boot-starter-test')
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+
+}

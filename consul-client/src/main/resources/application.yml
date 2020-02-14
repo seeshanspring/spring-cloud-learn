@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: consul-service-client
+
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        healthCheckInterval: 5s
+        register: false
+
+server:
+  port: 8081

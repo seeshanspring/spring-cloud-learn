@@ -1,0 +1,10 @@
+rootProject.name = 'spring-cloud-learn'
+
+include 'demo'
+
+include 'eureka-server'
+include 'eureka-service-provider'
+include 'eureka-service-client'
+
+include 'consul-service-discovery'
+include 'consul-client'

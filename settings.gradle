@@ -8,3 +8,5 @@ include 'eureka-service-client'
 
 include 'consul-service-discovery'
 include 'consul-client'
+
+include 'zuul'

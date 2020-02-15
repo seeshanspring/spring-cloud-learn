@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: spring-cloud-zuul
+
+server:
+  port: 9000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    baidu:
+      path: /baidu/**
+      url: https://www.baidu.com/
+    hello:
+      path: /hello/**
+      serviceId: spring-cloud-eureka-service-provider

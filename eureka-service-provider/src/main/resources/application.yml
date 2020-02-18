@@ -1,7 +1,10 @@
 spring:
   application:
     name: spring-cloud-eureka-service-provider
-
+  sleuth:
+    sampler:
+      probability: 1.0
+      
 server:
   port: 8081
 

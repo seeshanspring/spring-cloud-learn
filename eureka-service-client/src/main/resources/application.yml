@@ -3,6 +3,9 @@
 spring:
   application:
     name: spring-cloud-eureka-service-client
+  sleuth:
+    sampler:
+      probability: 1.0
 
 server:
   port: 9001

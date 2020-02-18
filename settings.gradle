@@ -13,3 +13,5 @@ include 'zuul'
 
 include 'spring-cloud-config-server'
 include 'spring-cloud-config-client'
+
+include 'sleuth'

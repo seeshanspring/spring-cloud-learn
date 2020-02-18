@@ -10,6 +10,7 @@ include 'consul-service-discovery'
 include 'consul-client'
 
 include 'zuul'
+include 'gateway'
 
 include 'spring-cloud-config-server'
 include 'spring-cloud-config-client'

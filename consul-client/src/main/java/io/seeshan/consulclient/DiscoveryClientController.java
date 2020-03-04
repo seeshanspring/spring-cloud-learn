@@ -43,7 +43,7 @@ public class DiscoveryClientController {
      */
     @RequestMapping("/services")
     public Object services() {
-        return discoveryClient.getInstances("consul-service-discovery");
+        return discoveryClient.getInstances(SERVICE_ID);
     }
 
     /**
@@ -51,12 +51,12 @@ public class DiscoveryClientController {
      */
     @RequestMapping("/discover")
     public Object discover() {
-        return loadBalancer.choose("consul-service-discovery").getUri().toString();
+        return loadBalancer.choose(SERVICE_ID).getUri().toString();
     }
 
     @RequestMapping("/callService")
     public String call() {
-        ServiceInstance serviceInstance = loadBalancer.choose("consul-service-discovery");
+        ServiceInstance serviceInstance = loadBalancer.choose(SERVICE_ID);
         System.out.println("服务地址：" + serviceInstance.getUri());
         System.out.println("服务名称：" + serviceInstance.getServiceId());
 

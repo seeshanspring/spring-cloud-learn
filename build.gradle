@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.0.3.RELEASE'
+    id 'org.springframework.boot' version '2.1.13.RELEASE'
     id 'java'
 }
 
@@ -7,7 +7,7 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 
 ext {
-    set('springCloudVersion', "Finchley.RELEASE")
+    set('springCloudVersion', "Greenwich.SR5")
 }
 
 subprojects {
@@ -15,7 +15,7 @@ subprojects {
     apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
 
-    group = 'io.seeshan.spring-cloud-learn'
+    group = 'io.seeshan'
     version = '0.0.1-SNAPSHOT'
     sourceCompatibility = '1.8'
 
@@ -29,7 +29,7 @@ subprojects {
 
     dependencyManagement {
         imports {
-            mavenBom "org.springframework.cloud:spring-cloud-dependencies:Finchley.RELEASE"
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
         }
     }
 

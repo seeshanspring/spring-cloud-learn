@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    vault:
+      authentication: token
+      token: s.3YCcklN9PEFUmpCe4Kw9E4KT
+      scheme: http
+      kv:
+        enabled: true
+        application-name: spring-cloud-vault
+#  application:
+#    name: spring-cloud-vault
